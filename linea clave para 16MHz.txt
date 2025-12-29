@@ -1,0 +1,5 @@
+Línea clave (por si alguien prefiere modificar el original)
+Si alguien tiene el sketch original de Jan (para 8 MHz) y quiere adaptarlo rápido, solo diles:
+En el setup(), busca la línea de inicialización del Si5351:C++si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0, Defs::SI5351Correction * 100ULL);Déjala tal cual (NO añadas el cuarto parámetro 16000000).
+La librería Etherkit Si5351 detecta automáticamente que el Arduino corre a 16 MHz (DF_CPU=16000000L definido por el IDE).
+Compila para Arduino Nano/Uno y listo.
